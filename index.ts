@@ -1,5 +1,5 @@
-import {ScraperApp} from './scraperApp'
-import {Config} from './config'
+import {ScraperApp} from './src/scraperApp'
+import {Config} from './src/config'
 
 
 let appConfig = new Config();

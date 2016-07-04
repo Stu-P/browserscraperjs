@@ -65,8 +65,8 @@ export class ScraperApp {
                     versionCheck.versionChange.newVersion = newVersion;
                     versionCheck.versionChange.dateOfChange = new Date();
                     _browser.currentVersion = newVersion;
-                    versionCheck.browser = _browser;
-                }
+               }
+                versionCheck.browser = _browser;
             }
             return versionCheck;
         }).then(function sendBrowserUpdate(result) {
@@ -98,29 +98,12 @@ export class ScraperApp {
             else return;
         }).error(x => console.log(x));
     }
+}
 
-    /*
-    * Handle YQL response
-   
-    private parseYahooQueryResponse = (yqlResult: any): string => {
-        console.log("scraperApp - onYahooQueryResponse called");
-        var result = JSON.parse(yqlResult);
-        return this.applyRegex(yqlResult.query.results, "");
-    }
-   
+// TODO!!!
+     /*   
     * Apply regex to YQL result to obtain only version number (exlude any other text contianed within html cell)
     */
-
-
-    /*
-        private SendBrowserUpdate = (result: any): void => {
-       }
-    
-        private sendVersionChangeAudit = (result: any): void => {
-        }
-    
-        */
-}
 
 function applyRegex(dirtyString: string, _regex: string): string {
     console.log("scraperApp - applyRegex called");
